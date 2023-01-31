@@ -56,7 +56,7 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body
-        console.log(email, password);
+        // console.log(email, password);
         const useremail = await User.findOne({ email });
         // console.log(useremail);
         if (useremail.password === password) {
